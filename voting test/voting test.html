@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body style="text-align: center">
+    <h1 style="color: green;">Input your age and click the button:</h1>
+
+    <input id="age" value="" />
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        var age = document.getElementById("age").value;
+        var yourAge;
+        if (age >= 18) {
+          yourAge = "You can vote!";
+        } else if (age < 18) {
+          yourAge = "You can not vote! Come later";
+        } else if (typeof age !== Number) {
+          yourAge = "Please enter  number!";
+        }
+        document.getElementById("demo").innerHTML = yourAge;
+      }
+    </script>
+  </body>
+</html>
