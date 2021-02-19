@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <br />
+
+    <h2 style="background-color: khaki">
+      * When you enter a number, you can calculate the sum of the numbers <br />
+      from zero to that number(entered number), divisible by 3 and 5.
+    </h2>
+    <br />
+    <label for="input" style="color: green"><b>Enter your number:</b></label>
+    <input type="number" id="input" />
+    <button onclick="sum()">Calculate</button> <br /><br />
+    <p id="output"></p>
+
+    <script>
+      function sum(limit) {
+        var number = 0;
+        limit = document.getElementById("input").value;
+        for (let i = 0; i <= limit; i++) {
+          if (i % 3 === 0 || i % 5 === 0) number += i;
+        }
+        document.getElementById("output").innerHTML = number;
+      }
+    </script>
+  </body>
+</html>
