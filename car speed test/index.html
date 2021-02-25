@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <br />
+    <p style="background-color: rgb(218, 241, 250); color: rgb(97, 49, 49)">
+      speed limit - 70 km/h <br />
+      5 km/h - 1 warning (one warnings for every 5km/h exceeding speed) <br />
+      12 warning => driving license seized
+    </p>
+    <br />
+
+    <label for="input"><b>Your Speed</b></label>
+    <input type="number" id="input" />
+    <input type="button" onclick="checkSpeed()" value="Check" />
+    <p id="demo"></p>
+    <script>
+      // speed limit - 70 km/h
+      // 5 km/h - 1 warning (one warnings for every 5km/h exceeding speed)
+      // 12 warning -> driving license seized
+
+      const SPEED_LIMIT = 70;
+      const KM_PER_POINT = 5;
+      const MAX_WARNING = 12;
+      var message;
+
+      function checkSpeed(speed) {
+        speed = document.getElementById("input").value;
+        if (speed <= SPEED_LIMIT) {
+          message = "OK!";
+        } else {
+          const warning = Math.floor((speed - SPEED_LIMIT) / KM_PER_POINT);
+          if (warning >= MAX_WARNING) {
+            message = "Driving license seized!";
+          } else if (warning === 0) {
+            message = "Attention! your speed: " + speed;
+          } else {
+            message = "Attention! you have " + warning + " warnings";
+          }
+        }
+        document.getElementById("demo").innerHTML = message;
+      }
+    </script>
+  </body>
+</html>
