@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #303A52;
+}
+.tasbeeh {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #2A7886;
+    border-radius: 90px;
+    border: 3px solid #79BAC7;
+    display: flex;
+    justify-content: center;
+}
+.tasbeeh .ekran {
+    position: absolute;
+    top: 50px;
+    border-radius: 90px;
+    outline: none;
+    border: none;
+    caret-color: #fff;
+    width: 200px;
+    height: 70px;
+    font-size: 3.5em;
+    text-align: center;
+    background: #BEEBE9;
+}
+.tasbeeh .tugma {
+    width: 100px;
+    height: 100px;
+    margin-top: 160px;
+    border-radius: 50px;
+    outline: none;
+    background: #88E1F2;
+}
+.tasbeeh .restart {
+    position: absolute;
+    margin-top: 290px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    outline: none;
+    background: #43DDE6;
+}
